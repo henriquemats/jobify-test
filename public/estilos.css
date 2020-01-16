@@ -1,6 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
-
+    background-image: url(https://www.tokkoro.com/picsup/5632552-white-wallpapers.jpg)
 }
 h1{
     text-align: center;
@@ -8,6 +8,8 @@ h1{
 p{
     text-align: center;
     font-size: 24px;
+    background-color: black;
+    color: white;
 }
 ul {
     list-style-type: none;
@@ -18,13 +20,15 @@ li{
     font-size: 24px;
 }
 h2 {
-    background-color: #c4c4c4;
+    color: rgb(253, 253, 253);
+    background-color: rgb(2, 2, 2);
     padding: 8px;
     font-size: 24px;
 
 }
 h3 {
     font-size: 24px;
+    color: rgb(0, 0, 0);
 }
  
 label{
