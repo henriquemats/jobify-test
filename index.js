@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+const path = require('path')
 
 const sqlite = require('sqlite')
 const dbConnection = sqlite.open('banco.sqlite', { Promise })
@@ -10,7 +11,9 @@ const port = process.env.PORT || 3000
 if (process.env.NODE_ENV === 'production') {
     app.set('view engine', 'ejs')
     app.use(express.static('public'));
-    app.use(bodyParser.urlencoded({ extended: true }))
+    app.get('*', (request, response) => {
+        response.sendFile(path.join(__dirname, 'index.js'));
+    });
 }
 
 app.set('view engine', 'ejs')
