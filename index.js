@@ -9,13 +9,10 @@ const port = process.env.PORT || 3000
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("public"));
-    app.get("/*", function (req, res) {
-        res.sendFile(path.join(__dirname, "index.js"));
-    });
 }
 
 else {
-    app.use(express.static(path.join(__dirname, 'public')));
+    app.use(express.static("public"));
 }
 
 app.set('view engine', 'ejs')
