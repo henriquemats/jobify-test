@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === 'production') {
     app.set('view engine', 'ejs')
     app.use(express.static('public'));
     app.get('/*', (request, response) => {
-        response.sendFile(path.join(__dirname, 'index.js'));
+        response.sendFile(path.join(__dirname, 'views'));
     });
 }
 
