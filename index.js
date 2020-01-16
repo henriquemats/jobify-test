@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000
 if (process.env.NODE_ENV === 'production') {
     app.set('view engine', 'ejs')
     app.use(express.static('public'));
-    app.get('*', (request, response) => {
+    app.get('/*', (request, response) => {
         response.sendFile(path.join(__dirname, 'index.js'));
     });
 }
