@@ -1,6 +1,6 @@
 {
   "name": "curriculo",
-  "version": "1.0.0",
+  "version": "0.1.4-alfa",
   "description": "a curriculum for get a job]",
   "main": "index.js",
   "engines": {
